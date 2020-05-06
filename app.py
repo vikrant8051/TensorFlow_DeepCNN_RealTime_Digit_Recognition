@@ -1,3 +1,8 @@
+###############################################################
+##########          By: suryaveer @IIT Indore         #########
+##########     GITHUB: https://github.com/surya-veer  #########
+###############################################################
+
 import pygame
 from  process_image import get_output_image
 
@@ -77,7 +82,6 @@ try:
 
             img = crope(screen)
             pygame.image.save(img, fname)
-	    
 
             output_img = get_output_image(fname)
             show_output_image(output_img)

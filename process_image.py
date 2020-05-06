@@ -7,11 +7,10 @@ from tensorflow.keras.models import load_model
 
 
 # loading pre trained model
-#model = load_model('cnn_model/digit_classifier.h5')
 model = load_model('mnist_CNN.h5')
 
 def predict_digit(img):
-    test_image = img.reshape(1, 28, 28, 1)
+    test_image = img.reshape(-1,28,28,1)
     return np.argmax(model.predict(test_image))
 
 
@@ -52,6 +51,7 @@ def image_refiner(gray):
 
 
 def get_output_image(path):
+  
     img = cv2.imread(path,2)
     img_org =  cv2.imread(path)
 
